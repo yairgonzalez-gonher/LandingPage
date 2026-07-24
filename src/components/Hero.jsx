@@ -10,7 +10,7 @@ export default function Hero({
   const { theme } = useTheme();
 
   return (
-    <section id="home" className={`relative text-center pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-${theme.primary}-600 via-${theme.primary}-500 to-${theme.secondary}-600 text-white overflow-hidden`}>
+    <section id="home" className={`relative text-center pt-32 pb-24 md:pt-40 md:pb-32 bg-linear-to-br from-${theme.primary}-600 via-${theme.primary}-500 to-${theme.secondary}-600 text-white overflow-hidden`}>
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className={`absolute top-0 right-0 w-96 h-96 bg-${theme.accent}-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob`}></div>
