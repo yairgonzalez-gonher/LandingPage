@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaBolt, FaMobileAlt, FaLock, FaChartLine, FaHeadset, FaRocket } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
 
@@ -27,30 +28,42 @@ export default function Features({
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((f, i) => {
-            const isComingSoon = f.badge === 'Proximamente';
+            const isDisabled = f.disabled || f.badge === 'Proximamente';
+            const cardClassName = `block p-6 lg:p-8 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'gray-50'} rounded-xl shadow-lg border border-${theme.bg === 'gray-900' ? 'gray-700' : 'gray-200'} ${
+              isDisabled
+                ? 'opacity-70 cursor-not-allowed'
+                : 'hover:shadow-xl transition-all duration-300 hover:scale-105'
+            }`;
+
+            const content = (
+              <>
+                <div className={`text-${theme.primary}-500 mb-4`}>{f.icon}</div>
+                <h3 className={`text-2xl font-semibold mb-2 text-${theme.text === 'white' ? 'white' : 'gray-900'}`}>
+                  {f.title}
+                </h3>
+                <p className={`text-${theme.text === 'white' ? 'gray-300' : 'gray-600'}`}>
+                  {f.desc}
+                </p>
+                {f.badge && (
+                  <p className={`mt-4 text-sm font-semibold text-${theme.primary}-500`}>
+                    {f.badge}
+                  </p>
+                )}
+              </>
+            );
+
+            if (!isDisabled && f.href) {
+              return (
+                <Link key={i} to={f.href} className={cardClassName}>
+                  {content}
+                </Link>
+              );
+            }
 
             return (
-            <div 
-              key={i} 
-              className={`p-6 lg:p-8 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'gray-50'} rounded-xl shadow-lg border border-${theme.bg === 'gray-900' ? 'gray-700' : 'gray-200'} ${
-                isComingSoon
-                  ? 'opacity-70 cursor-not-allowed'
-                  : 'hover:shadow-xl transition-all duration-300 hover:scale-105'
-              }`}
-            >
-              <div className={`text-${theme.primary}-500 mb-4`}>{f.icon}</div>
-              <h3 className={`text-2xl font-semibold mb-2 text-${theme.text === 'white' ? 'white' : 'gray-900'}`}>
-                {f.title}
-              </h3>
-              <p className={`text-${theme.text === 'white' ? 'gray-300' : 'gray-600'}`}>
-                {f.desc}
-              </p>
-              {f.badge && (
-                <p className={`mt-4 text-sm font-semibold text-${theme.primary}-500`}>
-                  {f.badge}
-                </p>
-              )}
-            </div>
+              <div key={i} className={cardClassName} aria-disabled={isDisabled || undefined}>
+                {content}
+              </div>
             );
           })}
         </div>
