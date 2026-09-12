@@ -43,10 +43,11 @@ export default function Footer() {
               Enlaces
             </h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#home" className="hover:text-steel transition-colors">Inicio</a></li>
-              <li><a href="#features" className="hover:text-steel transition-colors">Características</a></li>
-              <li><a href="#about" className="hover:text-steel transition-colors">Acerca de</a></li>
-              <li><a href="#pricing" className="hover:text-steel transition-colors">Precios</a></li>
+              <li><a href="#inicio" className="hover:text-steel transition-colors">Inicio</a></li>
+              <li><a href="#soluciones" className="hover:text-steel transition-colors">Soluciones</a></li>
+              <li><a href="#estadisticas" className="hover:text-steel transition-colors">Estadísticas</a></li>
+              <li><a href="#testimonios" className="hover:text-steel transition-colors">Testimonios</a></li>
+              <li><a href="#contacto" className="hover:text-steel transition-colors">Contacto</a></li>
             </ul>
           </div>
 
@@ -64,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-carbon-light pt-8 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} GON Soft Lab. Soluciones tecnológicas precisas.
+            © {new Date().getFullYear()} GONSoftLab. Soluciones tecnológicas precisas.
           </p>
         </div>
       </div>

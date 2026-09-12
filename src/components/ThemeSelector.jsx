@@ -25,7 +25,7 @@ export default function ThemeSelector() {
           />
           <div className={`fixed bottom-24 right-6 z-50 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} rounded-xl shadow-2xl p-4 border border-${theme.bg === 'gray-900' ? 'gray-700' : 'gray-200'} min-w-[200px]`}>
             <h3 className={`text-sm font-semibold mb-3 text-${theme.text === 'white' ? 'white' : 'gray-900'}`}>
-              Seleccionar Tema
+              Seleccionar tema
             </h3>
             <div className="grid grid-cols-2 gap-2">
               {Object.values(themes).map((t) => (

@@ -1,46 +1,61 @@
+import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Stats from '../components/Stats';
-import Pricing from '../components/Pricing';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
-import { FaCloud, FaShieldAlt, FaSync, FaChartBar, FaMobile, FaCog } from 'react-icons/fa';
+import DownloadModal from '../components/DownloadModal';
+import DemoModal from '../components/DemoModal';
+import { FaCloud, FaShieldAlt, FaSync, FaCog } from 'react-icons/fa';
 
 export default function LandingSaaS() {
-  const navLinks = ['Home', 'Features', 'Stats', /* 'Pricing', */ 'Testimonials', 'Contact'];
-  
+  const [downloadOpen, setDownloadOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
+
+  const navLinks = [
+    { label: 'Inicio', id: 'inicio' },
+    { label: 'Soluciones', id: 'soluciones' },
+    { label: 'Estadísticas', id: 'estadisticas' },
+    { label: 'Testimonios', id: 'testimonios' },
+    { label: 'Contacto', id: 'contacto' },
+  ];
+
   const features = [
-    { icon: <FaCloud size={32} />, title: 'Tikenta', desc: 'Automatizacion de Tickets y Facturas para tu Negocio', badge: 'Ver mas', href: '/soluciones/tikenta' },
-    { icon: <FaShieldAlt size={32} />, title: 'Foryzen', desc: 'ERP que automatiza y hace mas facil las actividades de tu Empresa', badge: 'Ver mas', href: '/soluciones/foryzen' },
-    { icon: <FaCog size={32} />, title: 'Software a la Medida', desc: 'Tienes una idea o necesitas automatizar tu negocio, nosotros podemos desarrollarla', badge: 'Ver mas', href: '/soluciones/software-a-la-medida' },
-    { icon: <FaSync size={32} />, title: 'CRM', desc: 'Manejo y control de tus clientes mas facil, asi como su acercamiento con ellos', badge: 'Ver mas', href: '/soluciones/crm' },
-    { icon: <FaChartBar size={32} />, title: 'POS (TBD)', desc: 'Facilita tus Ventas con Nuestro Sistema de Puntos de Venta', badge: 'Proximamente', href: '/soluciones/pos', disabled: true },
-    { icon: <FaMobile size={32} />, title: 'E-Commerce (TBD)', desc: 'Solucion para Poder llevar tu Negocio Digitalmente', badge: 'Proximamente', href: '/soluciones/e-commerce', disabled: true },
+    { icon: <FaCloud size={32} />, title: 'Tikenta', desc: 'Automatización de tickets y facturas para tu negocio', badge: 'Ver más', href: '/soluciones/tikenta' },
+    { icon: <FaShieldAlt size={32} />, title: 'Foryzen', desc: 'ERP que automatiza y hace más fácil las actividades de tu empresa', badge: 'Ver más', href: '/soluciones/foryzen' },
+    { icon: <FaCog size={32} />, title: 'Software a la Medida', desc: 'Tienes una idea o necesitas automatizar tu negocio, nosotros podemos desarrollarla', badge: 'Ver más', href: '/soluciones/software-a-la-medida' },
+    { icon: <FaSync size={32} />, title: 'CRM', desc: 'Manejo y control de tus clientes más fácil, así como su acercamiento con ellos', badge: 'Ver más', href: '/soluciones/crm' },
   ];
 
   return (
     <>
-      <Navbar links={navLinks} />
-      <Hero 
+      <Navbar
+        links={navLinks}
+        onDownloadOpen={() => setDownloadOpen(true)}
+        onDemoOpen={() => setDemoOpen(true)}
+      />
+      <Hero
         title="Plataformas realizadas para facilitar tu día a día"
         subtitle="Automatiza y escala tu negocio con nuestras soluciones todo-en-uno."
-        ctaText="Preguntar por mas informacion"
+        ctaText="Solicitar demo"
+        onDemoOpen={() => setDemoOpen(true)}
       />
       <Features items={features} title="Nuestras Soluciones" />
       <Stats />
-      {/* <Pricing /> */}
       <Testimonials />
-      <CTA 
+      <CTA
         title="¿Listo para transformar tu negocio?"
         description="Únete a miles de empresas que ya están creciendo con nuestra plataforma."
         buttonText="Comenzar ahora"
+        onDemoOpen={() => setDemoOpen(true)}
       />
       <ContactForm />
       <Footer />
+      <DownloadModal open={downloadOpen} onClose={() => setDownloadOpen(false)} />
+      <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </>
   );
 }
-

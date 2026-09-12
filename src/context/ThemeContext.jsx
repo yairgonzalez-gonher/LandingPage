@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export const themes = {
   default: {
-    name: 'GON Soft Lab',
+    name: 'GONSoftLab',
     key: 'default',
     primary: 'steel',
     secondary: 'steel',
@@ -13,7 +13,7 @@ export const themes = {
     text: 'gray',
   },
   ocean: {
-    name: 'Ocean',
+    name: 'Océano',
     key: 'ocean',
     primary: 'blue',
     secondary: 'cyan',
@@ -22,7 +22,7 @@ export const themes = {
     text: 'gray',
   },
   forest: {
-    name: 'Forest',
+    name: 'Bosque',
     key: 'forest',
     primary: 'green',
     secondary: 'emerald',
@@ -31,7 +31,7 @@ export const themes = {
     text: 'gray',
   },
   sunset: {
-    name: 'Sunset',
+    name: 'Atardecer',
     key: 'sunset',
     primary: 'orange',
     secondary: 'red',
@@ -40,7 +40,7 @@ export const themes = {
     text: 'gray',
   },
   dark: {
-    name: 'Dark',
+    name: 'Oscuro',
     key: 'dark',
     primary: 'purple',
     secondary: 'indigo',

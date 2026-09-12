@@ -7,11 +7,15 @@ export default function Logo({
   className = '',
 }) {
   return (
-    <Link to="/" className={`flex items-center gap-2 ${className}`}>
-      <img src="/logo.svg" alt="GON Soft Lab" className={imgClassName} />
+    <Link to="/" className={`flex items-center gap-2.5 ${className}`}>
+      <img
+        src="/logo-mark.svg"
+        alt="GONSoftLab"
+        className={imgClassName}
+      />
       {showWordmark && (
         <span className={`text-lg font-bold leading-tight ${wordmarkClassName}`}>
-          GON Soft Lab
+          GONSoftLab
         </span>
       )}
     </Link>

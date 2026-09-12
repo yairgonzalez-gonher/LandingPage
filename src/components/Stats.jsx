@@ -32,7 +32,7 @@ export default function Stats() {
 
   return (
     <section
-      id="stats"
+      id="estadisticas"
       className="py-20 bg-carbon text-white"
     >
       <div id="stats-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,10 +1,30 @@
 import { FaArrowRight } from 'react-icons/fa';
 
-export default function CTA({ title, description, buttonText, buttonLink }) {
+export default function CTA({ title, description, buttonText, buttonLink, onDemoOpen }) {
   const defaultTitle = '¿Listo para comenzar?';
   const defaultDescription = 'Únete a miles de empresas que ya están creciendo con nosotros.';
   const defaultButtonText = 'Comenzar ahora';
-  const defaultButtonLink = '#contact';
+  const defaultButtonLink = '#contacto';
+  const label = buttonText || defaultButtonText;
+
+  const primary = onDemoOpen ? (
+    <button
+      type="button"
+      onClick={onDemoOpen}
+      className="inline-flex items-center justify-center px-8 py-4 bg-carbon text-white rounded-lg font-semibold text-lg hover:bg-carbon-light transition-colors shadow-lg hover:shadow-xl"
+    >
+      {label}
+      <FaArrowRight className="ml-2" />
+    </button>
+  ) : (
+    <a
+      href={buttonLink || defaultButtonLink}
+      className="inline-flex items-center justify-center px-8 py-4 bg-carbon text-white rounded-lg font-semibold text-lg hover:bg-carbon-light transition-colors shadow-lg hover:shadow-xl"
+    >
+      {label}
+      <FaArrowRight className="ml-2" />
+    </a>
+  );
 
   return (
     <section className="py-20 bg-steel text-white">
@@ -16,18 +36,12 @@ export default function CTA({ title, description, buttonText, buttonLink }) {
           {description || defaultDescription}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {primary}
           <a
-            href={buttonLink || defaultButtonLink}
-            className="inline-flex items-center justify-center px-8 py-4 bg-carbon text-white rounded-lg font-semibold text-lg hover:bg-carbon-light transition-colors shadow-lg hover:shadow-xl"
-          >
-            {buttonText || defaultButtonText}
-            <FaArrowRight className="ml-2" />
-          </a>
-          <a
-            href="#features"
+            href="#soluciones"
             className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-carbon transition-colors"
           >
-            Saber más
+            Ver soluciones
           </a>
         </div>
       </div>
