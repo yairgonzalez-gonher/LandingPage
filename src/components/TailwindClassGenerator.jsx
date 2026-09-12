@@ -9,6 +9,12 @@ export default function TailwindClassGenerator() {
 
 // List of all possible class combinations used dynamically
 const allThemeClasses = `
+  bg-steel-600 bg-steel-700 bg-steel-500 bg-steel-400 bg-steel-50
+  text-steel-600 text-steel-500 text-steel-400
+  border-steel-500 border-steel-600 border-steel-300
+  hover:bg-steel-700 hover:text-steel-600 hover:border-steel-300
+  from-steel-600 via-steel-500 to-steel-600
+  bg-carbon bg-carbon-light text-carbon
   bg-indigo-600 bg-blue-600 bg-green-600 bg-orange-600 bg-purple-600
   bg-indigo-700 bg-blue-700 bg-green-700 bg-orange-700 bg-purple-700
   bg-indigo-500 bg-blue-500 bg-green-500 bg-orange-500 bg-purple-500

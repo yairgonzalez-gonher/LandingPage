@@ -1,8 +1,6 @@
-import { useTheme } from '../context/ThemeContext';
 import { useEffect, useState } from 'react';
 
 export default function Stats() {
-  const { theme } = useTheme();
   const [counted, setCounted] = useState(false);
 
   const stats = [
@@ -35,7 +33,7 @@ export default function Stats() {
   return (
     <section
       id="stats"
-      className={`py-20 bg-gradient-to-r from-${theme.primary}-600 to-${theme.secondary}-600 text-white`}
+      className="py-20 bg-carbon text-white"
     >
       <div id="stats-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">

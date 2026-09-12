@@ -1,9 +1,9 @@
 import SolutionPlaceholder from './SolutionPlaceholder';
 
-export default function Factuflow() {
+export default function Tikenta() {
   return (
     <SolutionPlaceholder
-      title="Factuflow"
+      title="Tikenta"
       description="Automatizacion de Tickets y Facturas para tu Negocio"
     />
   );

@@ -44,7 +44,7 @@ export default function ContactForm() {
             <input 
               {...register('name')} 
               placeholder="Nombre completo" 
-              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-${theme.primary}-500 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
+              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-steel bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
             />
             {errors.name && <p className="text-red-500 mt-1 text-sm">{errors.name.message}</p>}
           </div>
@@ -54,7 +54,7 @@ export default function ContactForm() {
               {...register('email')} 
               type="email"
               placeholder="Correo electrónico" 
-              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-${theme.primary}-500 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
+              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-steel bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
             />
             {errors.email && <p className="text-red-500 mt-1 text-sm">{errors.email.message}</p>}
           </div>
@@ -64,14 +64,14 @@ export default function ContactForm() {
               {...register('message')} 
               placeholder="Tu mensaje..." 
               rows="5"
-              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-${theme.primary}-500 resize-none bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
+              className={`w-full p-4 border-2 border-${theme.bg === 'gray-900' ? 'gray-600' : 'gray-300'} rounded-lg focus:outline-none focus:border-steel resize-none bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} text-${theme.text === 'white' ? 'white' : 'gray-900'}`}
             ></textarea>
             {errors.message && <p className="text-red-500 mt-1 text-sm">{errors.message.message}</p>}
           </div>
 
           <button 
             type="submit" 
-            className={`w-full py-4 bg-${theme.primary}-600 hover:bg-${theme.primary}-700 text-white rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl`}
+            className="w-full py-4 bg-steel hover:bg-steel-700 text-white rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl"
           >
             Enviar mensaje
           </button>

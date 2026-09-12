@@ -19,33 +19,33 @@ export default function Features({
     <section id="features" className={`py-20 bg-${theme.bg === 'gray-900' ? 'gray-900' : 'white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 text-${theme.text === 'white' ? 'white' : 'gray-900'}`}>
+          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${theme.text === 'white' ? 'text-white' : 'text-carbon'}`}>
             {title}
           </h2>
-          <p className={`text-lg text-${theme.text === 'white' ? 'gray-300' : 'gray-600'}`}>
+          <p className={`text-lg ${theme.text === 'white' ? 'text-gray-300' : 'text-gray-600'}`}>
             Todo lo que necesitas para tener éxito
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((f, i) => {
             const isDisabled = f.disabled || f.badge === 'Proximamente';
-            const cardClassName = `block p-6 lg:p-8 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'gray-50'} rounded-xl shadow-lg border border-${theme.bg === 'gray-900' ? 'gray-700' : 'gray-200'} ${
+            const cardClassName = `block p-6 lg:p-8 bg-${theme.bg === 'gray-900' ? 'gray-800' : 'white'} rounded-xl shadow-lg border border-${theme.bg === 'gray-900' ? 'gray-700' : 'gray-200'} ${
               isDisabled
                 ? 'opacity-70 cursor-not-allowed'
-                : 'hover:shadow-xl transition-all duration-300 hover:scale-105'
+                : 'hover:shadow-xl hover:border-steel transition-all duration-300 hover:-translate-y-1'
             }`;
 
             const content = (
               <>
-                <div className={`text-${theme.primary}-500 mb-4`}>{f.icon}</div>
-                <h3 className={`text-2xl font-semibold mb-2 text-${theme.text === 'white' ? 'white' : 'gray-900'}`}>
+                <div className="text-steel mb-4">{f.icon}</div>
+                <h3 className={`text-2xl font-semibold mb-2 ${theme.text === 'white' ? 'text-white' : 'text-carbon'}`}>
                   {f.title}
                 </h3>
-                <p className={`text-${theme.text === 'white' ? 'gray-300' : 'gray-600'}`}>
+                <p className={theme.text === 'white' ? 'text-gray-300' : 'text-texto'}>
                   {f.desc}
                 </p>
                 {f.badge && (
-                  <p className={`mt-4 text-sm font-semibold text-${theme.primary}-500`}>
+                  <p className="mt-4 text-sm font-semibold text-steel">
                     {f.badge}
                   </p>
                 )}

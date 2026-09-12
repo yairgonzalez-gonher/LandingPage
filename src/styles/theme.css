@@ -1,19 +1,19 @@
 /* Theme CSS Variables */
 :root {
-  /* Default Theme */
-  --color-primary: 99 102 241; /* indigo-600 */
-  --color-primary-dark: 79 70 229; /* indigo-700 */
-  --color-primary-light: 129 140 248; /* indigo-400 */
-  --color-secondary: 139 92 246; /* purple-600 */
-  --color-secondary-light: 167 139 250; /* purple-400 */
-  --color-accent: 236 72 153; /* pink-500 */
-  --color-accent-light: 244 114 182; /* pink-400 */
-  --color-bg: 255 255 255; /* white */
-  --color-bg-alt: 249 250 251; /* gray-50 */
-  --color-bg-dark: 17 24 39; /* gray-900 */
-  --color-text: 17 24 39; /* gray-900 */
-  --color-text-light: 107 114 128; /* gray-500 */
-  --color-text-dark: 255 255 255; /* white */
+  /* GON Soft Lab — carbono + acero */
+  --color-primary: 70 130 180; /* #4682B4 */
+  --color-primary-dark: 59 109 150; /* #3b6d96 */
+  --color-primary-light: 91 150 194;
+  --color-secondary: 70 130 180;
+  --color-secondary-light: 126 173 209;
+  --color-accent: 70 130 180;
+  --color-accent-light: 126 173 209;
+  --color-bg: 255 255 255;
+  --color-bg-alt: 244 246 248; /* #F4F6F8 */
+  --color-bg-dark: 28 32 37; /* #1C2025 */
+  --color-text: 51 51 51; /* #333333 */
+  --color-text-light: 107 114 128;
+  --color-text-dark: 255 255 255;
 }
 
 [data-theme="ocean"] {

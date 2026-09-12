@@ -4,11 +4,11 @@ const ThemeContext = createContext();
 
 export const themes = {
   default: {
-    name: 'Default',
+    name: 'GON Soft Lab',
     key: 'default',
-    primary: 'indigo',
-    secondary: 'purple',
-    accent: 'pink',
+    primary: 'steel',
+    secondary: 'steel',
+    accent: 'steel',
     bg: 'white',
     text: 'gray',
   },

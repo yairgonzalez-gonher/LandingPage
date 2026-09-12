@@ -57,13 +57,13 @@ export default function Testimonials() {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <FaStar
                     key={i}
-                    className={`text-${theme.primary}-500 text-sm`}
+                    className="text-steel text-sm"
                     fill="currentColor"
                   />
                 ))}
               </div>
               
-              <FaQuoteLeft className={`text-${theme.primary}-500 text-2xl mb-4 opacity-50`} />
+              <FaQuoteLeft className="text-steel text-2xl mb-4 opacity-50" />
               
               <p className={`text-${theme.text === 'white' ? 'gray-200' : 'gray-700'} mb-6 leading-relaxed`}>
                 "{testimonial.text}"

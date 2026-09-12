@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @import "./styles/theme.css";
 
+@theme {
+  --color-carbon: #1c2025;
+  --color-carbon-light: #2c323a;
+  --color-steel: #4682b4;
+  --color-steel-50: #eef4f8;
+  --color-steel-100: #d4e4f0;
+  --color-steel-400: #5b96c2;
+  --color-steel-500: #4682b4;
+  --color-steel-600: #4682b4;
+  --color-steel-700: #3b6d96;
+  --color-steel-800: #2f5778;
+  --color-gris-claro: #f4f6f8;
+  --color-texto: #333333;
+}
+
 /* Animations */
 @keyframes blob {
   0% {
@@ -34,22 +49,29 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(70, 130, 180, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(70, 130, 180, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f4f6f8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #4682b4;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #3b6d96;
 }
 
 /* Ensure proper font rendering */

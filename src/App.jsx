@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingSaaS from './pages/LandingSaaS';
-import Factuflow from './pages/solutions/Factuflow';
-import Forgeon from './pages/solutions/Forgeon';
+import Tikenta from './pages/solutions/Tikenta';
+import Foryzen from './pages/solutions/Foryzen';
 import SoftwareALaMedida from './pages/solutions/SoftwareALaMedida';
 import Crm from './pages/solutions/Crm';
 import Pos from './pages/solutions/Pos';
@@ -15,8 +15,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingSaaS />} />
-        <Route path="/soluciones/factuflow" element={<Factuflow />} />
-        <Route path="/soluciones/forgeon" element={<Forgeon />} />
+        <Route path="/soluciones/tikenta" element={<Tikenta />} />
+        <Route path="/soluciones/foryzen" element={<Foryzen />} />
         <Route path="/soluciones/software-a-la-medida" element={<SoftwareALaMedida />} />
         <Route path="/soluciones/crm" element={<Crm />} />
         <Route path="/soluciones/pos" element={<Pos />} />
