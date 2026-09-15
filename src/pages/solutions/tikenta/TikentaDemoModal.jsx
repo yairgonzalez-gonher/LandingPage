@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -90,7 +90,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end sm:items-center justify-center p-0 sm:p-5 bg-carbon/70 backdrop-blur-sm"
+      className="fixed inset-0 z-[80] flex items-end sm:items-center justify-center p-0 sm:p-5 bg-tk-dark/70 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
@@ -102,13 +102,13 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
       >
         <div className="sticky top-0 bg-white/95 backdrop-blur border-b border-gray-200 px-5 sm:px-7 py-5 flex justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-steel">Solicita una demostración</p>
-            <h2 id="tikenta-demo-title" className="text-2xl text-carbon mt-1">Ve cómo Tikenta trabaja con tus tickets.</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-tk-brand">Solicita una demostración</p>
+            <h2 id="tikenta-demo-title" className="text-2xl text-tk-text mt-1">Ve cómo Tikenta trabaja con tus tickets.</h2>
             <p className="text-sm text-gray-500 mt-1">
               Cuéntanos tu operación. Preparamos una demo de gasolina, casetas o ambos.
             </p>
           </div>
-          <button type="button" onClick={onClose} aria-label="Cerrar" className="h-9 w-9 rounded-lg border border-gray-200 text-xl leading-none hover:border-steel hover:text-steel">
+          <button type="button" onClick={onClose} aria-label="Cerrar" className="h-9 w-9 rounded-lg border border-gray-200 text-xl leading-none hover:border-tk-brand hover:text-tk-brand">
             ×
           </button>
         </div>
@@ -156,7 +156,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
               ].map(([value, label]) => (
                 <label key={value} className="cursor-pointer">
                   <input type="radio" value={value} {...register('ticketType')} className="peer sr-only" />
-                  <span className="flex items-center justify-center min-h-12 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 peer-checked:border-steel peer-checked:bg-steel-50 peer-checked:text-steel">
+                  <span className="flex items-center justify-center min-h-12 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 peer-checked:border-tk-brand peer-checked:bg-tk-tint2 peer-checked:text-tk-brand">
                     {label}
                   </span>
                 </label>
@@ -175,7 +175,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
               ].map(([value, label]) => (
                 <label key={value} className="cursor-pointer">
                   <input type="radio" value={value} {...register('clientInvoicingInterest')} className="peer sr-only" />
-                  <span className="flex items-center justify-center min-h-12 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 peer-checked:border-steel peer-checked:bg-steel-50 peer-checked:text-steel">
+                  <span className="flex items-center justify-center min-h-12 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 peer-checked:border-tk-brand peer-checked:bg-tk-tint2 peer-checked:text-tk-brand">
                     {label}
                   </span>
                 </label>
@@ -198,7 +198,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
           </Field>
 
           <label className="mt-4 flex gap-3 items-start rounded-xl bg-gray-50 border border-gray-100 p-3 text-xs text-gray-600">
-            <input type="checkbox" {...register('privacyAccepted')} className="mt-0.5 accent-[#4682b4]" />
+            <input type="checkbox" {...register('privacyAccepted')} className="mt-0.5 accent-[#4f2ed3]" />
             <span>
               Autorizo que mis datos se usen para atender esta solicitud y contactarme respecto de Tikenta.
               <span className="text-red-600"> *</span>
@@ -217,7 +217,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="rounded-lg bg-steel text-white px-4 py-2.5 text-sm font-bold hover:bg-steel-700 disabled:opacity-60"
+              className="rounded-lg bg-tk-brand text-white px-4 py-2.5 text-sm font-bold hover:bg-tk-deep disabled:opacity-60"
             >
               {isSubmitting ? 'Enviando...' : 'Solicitar mi demo'}
             </button>
@@ -229,7 +229,7 @@ export default function TikentaDemoModal({ open, onClose, initialPlan }) {
 }
 
 const inputClass =
-  'w-full border border-gray-300 rounded-xl px-3.5 py-3 text-sm outline-none focus:border-steel focus:ring-2 focus:ring-steel/20';
+  'w-full border border-gray-300 rounded-xl px-3.5 py-3 text-sm outline-none focus:border-tk-brand focus:ring-2 focus:ring-tk-brand/20';
 
 function Field({ label, required, error, children, className = '' }) {
   return (

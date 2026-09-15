@@ -14,6 +14,19 @@
   --color-steel-800: #2f5778;
   --color-gris-claro: #f4f6f8;
   --color-texto: #333333;
+
+  /* Tikenta product palette (from Tikenta.html) */
+  --color-tk-dark: #1a1147;
+  --color-tk-brand: #4f2ed3;
+  --color-tk-deep: #4325c2;
+  --color-tk-light: #6b47e8;
+  --color-tk-soft: #a78bfa;
+  --color-tk-tint: #ede9fe;
+  --color-tk-tint2: #faf8ff;
+  --color-tk-line: #c4b5fd;
+  --color-tk-ink: #5b21b6;
+  --color-tk-bg: #f7f7f8;
+  --color-tk-text: #18181b;
 }
 
 /* Animations */

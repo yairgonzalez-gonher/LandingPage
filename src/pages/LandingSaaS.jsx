@@ -7,12 +7,10 @@ import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
-import DownloadModal from '../components/DownloadModal';
 import DemoModal from '../components/DemoModal';
 import { FaCloud, FaShieldAlt, FaSync, FaCog } from 'react-icons/fa';
 
 export default function LandingSaaS() {
-  const [downloadOpen, setDownloadOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
 
   const navLinks = [
@@ -32,11 +30,7 @@ export default function LandingSaaS() {
 
   return (
     <>
-      <Navbar
-        links={navLinks}
-        onDownloadOpen={() => setDownloadOpen(true)}
-        onDemoOpen={() => setDemoOpen(true)}
-      />
+      <Navbar links={navLinks} />
       <Hero
         title="Plataformas realizadas para facilitar tu día a día"
         subtitle="Automatiza y escala tu negocio con nuestras soluciones todo-en-uno."
@@ -54,7 +48,6 @@ export default function LandingSaaS() {
       />
       <ContactForm />
       <Footer />
-      <DownloadModal open={downloadOpen} onClose={() => setDownloadOpen(false)} />
       <DemoModal open={demoOpen} onClose={() => setDemoOpen(false)} />
     </>
   );

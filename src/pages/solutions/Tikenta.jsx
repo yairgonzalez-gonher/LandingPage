@@ -56,7 +56,7 @@ export default function Tikenta() {
           <div className="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm font-bold text-gray-600">
             {trustItems.map((item) => (
               <span key={item} className="flex items-center gap-2">
-                <i className="h-1 w-1 rounded-full bg-steel" />
+                <i className="h-1.5 w-1.5 rounded-[2px] bg-tk-brand" />
                 {item}
               </span>
             ))}

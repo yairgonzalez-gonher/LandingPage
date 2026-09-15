@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { TIKENTA_VIDEO } from './tikentaData';
 
 function isYouTube(url) {
@@ -31,16 +31,16 @@ export default function TikentaVideo() {
     <section id="video" className="py-20 md:py-28 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-steel mb-3">Conoce Tikenta</p>
-          <h2 className="text-3xl md:text-5xl text-carbon">
-            El flujo, en <span className="tikenta-serif text-steel">movimiento</span>.
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-tk-brand mb-3">Conoce Tikenta</p>
+          <h2 className="text-3xl md:text-5xl text-tk-text">
+            El flujo, en <span className="tikenta-serif text-tk-brand">movimiento</span>.
           </h2>
           <p className="mt-4 text-gray-600 text-lg">
             Captura, validación y facturación de tickets dentro de la plataforma.
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-4xl aspect-video rounded-2xl overflow-hidden bg-carbon shadow-[0_30px_80px_rgba(28,32,37,0.28)] border border-white/10">
+        <div className="relative mx-auto max-w-4xl aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-tk-dark to-[#31206f] shadow-[0_30px_80px_rgba(26,17,71,0.28)] border border-white/10">
           <div className="tikenta-dash-grid absolute inset-0 opacity-40 pointer-events-none" />
 
           {playing && hasVideo && embed && (
@@ -70,7 +70,7 @@ export default function TikentaVideo() {
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center px-6">
-                    <p className="tikenta-num text-steel/80 text-sm mb-2">01 / DEMO</p>
+                    <p className="tikenta-num text-tk-brand/80 text-sm mb-2">01 / DEMO</p>
                     <p className="text-white/80 text-xl md:text-2xl max-w-md mx-auto">
                       {hasVideo ? title : 'Video de producto en preparación'}
                     </p>

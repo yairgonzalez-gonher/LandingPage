@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { TIKENTA_LOGIN_URL, navLinks } from './tikentaData';
@@ -14,14 +14,14 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
             <img src="/logo-mark.svg" alt="GONSoftLab" className="h-8 w-auto" />
           </Link>
           <span className="hidden sm:block h-6 w-px bg-gray-200" />
-          <a href="#inicio" className="font-bold text-[17px] text-carbon tracking-tight">
+          <a href="#inicio" className="font-bold text-[17px] text-tk-text tracking-tight">
             TIKENTA
           </a>
         </div>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-gray-600" aria-label="Navegación de Tikenta">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-steel transition-colors">
+            <a key={link.href} href={link.href} className="hover:text-tk-brand transition-colors">
               {link.label}
             </a>
           ))}
@@ -31,7 +31,7 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
           <button
             type="button"
             onClick={onDownloadOpen}
-            className="hidden lg:inline-flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm font-bold text-carbon hover:border-steel hover:text-steel transition-colors"
+            className="hidden lg:inline-flex items-center rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm font-bold text-tk-text hover:border-tk-line hover:text-tk-brand transition-colors"
           >
             Descargar soluciones
           </button>
@@ -39,20 +39,20 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
             href={TIKENTA_LOGIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center rounded-lg border border-gray-200 bg-white px-3.5 py-2.5 text-sm font-bold text-carbon hover:border-steel hover:text-steel transition-colors"
+            className="hidden md:inline-flex items-center rounded-lg border border-gray-200 bg-white px-3.5 py-2.5 text-sm font-bold text-tk-text hover:border-tk-brand hover:text-tk-brand transition-colors"
           >
             Iniciar sesión
           </a>
           <button
             type="button"
             onClick={onDemoOpen}
-            className="inline-flex items-center rounded-lg bg-steel px-3.5 py-2.5 text-sm font-bold text-white hover:bg-steel-700 transition-colors shadow-[0_8px_22px_rgba(70,130,180,0.28)]"
+            className="inline-flex items-center rounded-lg bg-tk-brand px-3.5 py-2.5 text-sm font-bold text-white hover:bg-tk-deep transition-colors shadow-[0_8px_22px_rgba(79,46,211,0.24)]"
           >
             Solicitar demo
           </button>
           <button
             type="button"
-            className="lg:hidden p-2 text-carbon"
+            className="lg:hidden p-2 text-tk-text"
             aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
             onClick={() => setOpen((v) => !v)}
           >
@@ -67,7 +67,7 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
             <a
               key={link.href}
               href={link.href}
-              className="block py-2.5 font-semibold text-carbon"
+              className="block py-2.5 font-semibold text-tk-text"
               onClick={() => setOpen(false)}
             >
               {link.label}
@@ -75,7 +75,7 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
           ))}
           <button
             type="button"
-            className="block w-full text-left py-2.5 font-semibold text-carbon"
+            className="block w-full text-left py-2.5 font-semibold text-tk-text"
             onClick={() => {
               setOpen(false);
               onDownloadOpen?.();
@@ -87,14 +87,14 @@ export default function TikentaNav({ onDemoOpen, onDownloadOpen }) {
             href={TIKENTA_LOGIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block py-2.5 font-semibold text-carbon"
+            className="block py-2.5 font-semibold text-tk-text"
             onClick={() => setOpen(false)}
           >
             Iniciar sesión
           </a>
           <button
             type="button"
-            className="mt-2 w-full rounded-lg bg-steel px-3.5 py-2.5 text-sm font-bold text-white"
+            className="mt-2 w-full rounded-lg bg-tk-brand px-3.5 py-2.5 text-sm font-bold text-white"
             onClick={() => {
               setOpen(false);
               onDemoOpen?.();

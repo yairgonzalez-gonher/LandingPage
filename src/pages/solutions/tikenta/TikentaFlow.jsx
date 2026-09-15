@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import {
   FaCamera,
   FaSearchPlus,
@@ -107,17 +107,17 @@ export default function TikentaFlow() {
   const Icon = step.icon;
 
   return (
-    <section id="flujo" className="relative py-20 md:py-28 overflow-hidden bg-carbon text-white">
+    <section id="flujo" className="relative py-20 md:py-28 overflow-hidden bg-tk-dark text-white">
       <div className="tikenta-dash-grid absolute inset-0 opacity-25 pointer-events-none" />
-      <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-steel/20 blur-3xl pointer-events-none" />
-      <div className="absolute -right-16 bottom-10 h-64 w-64 rounded-full bg-steel/10 blur-3xl pointer-events-none" />
+      <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-tk-brand/20 blur-3xl pointer-events-none" />
+      <div className="absolute -right-16 bottom-10 h-64 w-64 rounded-full bg-tk-tint blur-3xl pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10 md:mb-14">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-steel-400 mb-3">Cómo funciona</p>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-tk-soft mb-3">Cómo funciona</p>
           <h2 className="text-3xl md:text-5xl">
             Del ticket al control fiscal,{' '}
-            <span className="tikenta-serif text-steel-400">paso a paso</span>.
+            <span className="tikenta-serif text-tk-soft">paso a paso</span>.
           </h2>
           <p className="mt-4 text-lg text-white/60">
             El flujo real del producto: captura, lectura, validación, facturación y reporte. Sin venderlo como un sistema genérico.
@@ -132,7 +132,7 @@ export default function TikentaFlow() {
               aria-hidden="true"
             />
             <span
-              className="absolute top-[18px] left-6 h-px bg-steel transition-all duration-500"
+              className="absolute top-[18px] left-6 h-px bg-tk-brand transition-all duration-500"
               style={{
                 width: active === 0
                   ? '0px'
@@ -154,10 +154,10 @@ export default function TikentaFlow() {
                     <span
                       className={`mb-3 ml-1 flex h-9 w-9 items-center justify-center rounded-full border text-xs font-black transition-all ${
                         isActive
-                          ? 'border-steel bg-steel text-white scale-110 shadow-[0_0_0_4px_rgba(70,130,180,0.25)]'
+                          ? 'border-tk-brand bg-tk-brand text-white scale-110 shadow-[0_0_0_4px_rgba(79,46,211,0.25)]'
                           : isDone
-                            ? 'border-steel bg-carbon text-steel'
-                            : 'border-white/20 bg-carbon text-white/45 group-hover:border-steel/60 group-hover:text-white'
+                            ? 'border-tk-brand bg-tk-dark text-tk-brand'
+                            : 'border-white/20 bg-tk-dark text-white/45 group-hover:border-tk-brand/60 group-hover:text-white'
                       }`}
                     >
                       {String(index + 1).padStart(2, '0')}
@@ -179,11 +179,11 @@ export default function TikentaFlow() {
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-5 md:gap-6 items-stretch">
           <article className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6 md:p-8">
             <div className="flex items-start gap-4">
-              <span className="h-12 w-12 rounded-xl bg-steel/20 text-steel grid place-items-center shrink-0">
+              <span className="h-12 w-12 rounded-xl bg-tk-brand/20 text-tk-brand grid place-items-center shrink-0">
                 <Icon size={22} />
               </span>
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-steel-400">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-tk-soft">
                   Paso {active + 1} · {step.meta}
                 </p>
                 <h3 className="text-2xl md:text-3xl font-semibold mt-1">{step.title}</h3>
@@ -197,7 +197,7 @@ export default function TikentaFlow() {
             <ul className="mt-6 space-y-3">
               {step.points.map((point) => (
                 <li key={point} className="flex items-start gap-3 text-sm text-white/75">
-                  <span className="mt-0.5 h-5 w-5 rounded-md bg-steel/20 text-steel grid place-items-center text-[10px] font-black shrink-0">
+                  <span className="mt-0.5 h-5 w-5 rounded-md bg-tk-brand/20 text-tk-brand grid place-items-center text-[10px] font-black shrink-0">
                     ✓
                   </span>
                   {point}
@@ -210,7 +210,7 @@ export default function TikentaFlow() {
                 type="button"
                 disabled={active === 0}
                 onClick={() => setActive((v) => Math.max(0, v - 1))}
-                className="rounded-lg border border-white/20 px-4 py-2.5 text-sm font-bold text-white/80 hover:border-steel hover:text-white disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
+                className="rounded-lg border border-white/20 px-4 py-2.5 text-sm font-bold text-white/80 hover:border-tk-brand hover:text-white disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
               >
                 Anterior
               </button>
@@ -218,7 +218,7 @@ export default function TikentaFlow() {
                 type="button"
                 disabled={active === steps.length - 1}
                 onClick={() => setActive((v) => Math.min(steps.length - 1, v + 1))}
-                className="inline-flex items-center gap-2 rounded-lg bg-steel px-4 py-2.5 text-sm font-bold text-white hover:bg-steel-700 disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-tk-brand px-4 py-2.5 text-sm font-bold text-white hover:bg-tk-deep disabled:opacity-35 disabled:cursor-not-allowed transition-colors"
               >
                 Siguiente
                 <FaArrowRight className="text-xs" />
@@ -227,10 +227,10 @@ export default function TikentaFlow() {
           </article>
 
           <aside className="rounded-2xl border border-white/10 bg-[#111418] p-5 md:p-6 shadow-[0_24px_60px_rgba(0,0,0,0.35)] overflow-hidden relative">
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-steel via-steel-400 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-tk-brand via-tk-soft to-transparent" />
             <div className="flex items-center justify-between gap-3 mb-5">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-steel-400">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-tk-soft">
                   {step.preview.eyebrow}
                 </p>
                 <p className="text-sm text-white/45 mt-1">Vista del módulo en este paso</p>
@@ -238,13 +238,13 @@ export default function TikentaFlow() {
               <span className="tikenta-num text-xs text-white/35">0{active + 1}/05</span>
             </div>
 
-            <div className="rounded-xl border border-white/10 bg-carbon overflow-hidden">
+            <div className="rounded-xl border border-white/10 bg-tk-dark overflow-hidden">
               <div className="flex items-center justify-between px-3.5 py-2.5 border-b border-white/10 bg-white/[0.03]">
                 <span className="text-xs font-bold text-white/70">Tikenta · flujo</span>
                 <span className="flex gap-1.5" aria-hidden="true">
                   <i className="h-1.5 w-1.5 rounded-full bg-white/25" />
                   <i className="h-1.5 w-1.5 rounded-full bg-white/25" />
-                  <i className="h-1.5 w-1.5 rounded-full bg-steel" />
+                  <i className="h-1.5 w-1.5 rounded-full bg-tk-brand" />
                 </span>
               </div>
               <dl className="divide-y divide-white/10">
@@ -269,7 +269,7 @@ export default function TikentaFlow() {
                   onClick={() => setActive(index)}
                   aria-label={item.title}
                   className={`h-1.5 rounded-full transition-all ${
-                    index === active ? 'bg-steel' : index < active ? 'bg-steel/45' : 'bg-white/15'
+                    index === active ? 'bg-tk-brand' : index < active ? 'bg-tk-brand/45' : 'bg-white/15'
                   }`}
                 />
               ))}
